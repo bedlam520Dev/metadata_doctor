@@ -1,0 +1,20 @@
+{
+    "name_template": "Fren #{token_id}",
+    "description": "Welcome to the chill-verse of Low Key Frens, a unique collection where every Fren rocks its own distinct style. Each character is a one-of-a-kind combination of traits, from their expressive Eyes and unique Fur to their signature Clothing, Moon Mark, and Accessories, all set against cool Backgrounds. Your Low Key Fren isn't just a PFP; it's your digital alter-ego in a community that values authenticity and understated cool. Find your Fren, rep your style, and keep it Low Key.",
+    "strict_attribute_schema": [
+        "Background",
+        "Fur",
+        "Clothing",
+        "Mouth",
+        "Moon Mark",
+        "Eyes",
+        "Accessories"
+    ],
+    "image_base_uri": "ipfs://bafybeicwof3xcicybnsflw54gmt645bd4g5aq5cgv3bvk7uducywjbe2hu/{image_filename}",
+    "animation_url": null,
+    "background_color": null,
+    "youtube_url": null,
+    "external_url": "https://lowkey.fun",
+    "seller_fee_basis_points": 500,
+    "fee_recipient": "0xb6FFA8792476B0188811137536090da3cfEA70B0"
+}
