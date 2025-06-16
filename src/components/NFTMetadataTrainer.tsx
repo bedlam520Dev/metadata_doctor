@@ -238,7 +238,9 @@ export default function NFTMetadataTrainer() {
 		const url = URL.createObjectURL(blob);
 		const a = document.createElement('a');
 		a.href = url;
-		a.download = `nft-training-data-${new Date().toISOString().split('T')[0]}.json`;
+		a.download = `nft-training-data-${
+			new Date().toISOString().split('T')[0]
+		}.json`;
 		document.body.appendChild(a);
 		a.click();
 		document.body.removeChild(a);
@@ -267,24 +269,29 @@ export default function NFTMetadataTrainer() {
 				onClose={clearStatus}
 			/>
 
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-				{stage === 'setup' ?
-					<SetupPanel
-						onStart={handleStartTraining}
-						loading={loading}
-					/>
-				:	<TrainingPanel
-						allTraits={allTraits}
-						currentTraitIndex={currentTraitIndex}
-						selectedImages={selectedImages}
-						trainingResults={trainingResults}
-						onToggleImage={handleToggleImage}
-						onSaveTrait={handleSaveTrait}
-						onSkipTrait={handleSkipTrait}
-						onExport={handleExport}
-						imageData={projectData.imageData}
-					/>
-				}
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+				<div className='w-full'>
+					{' '}
+					{/* ✅ Ensures full width inside max-w container */}
+					{stage === 'setup' ? (
+						<SetupPanel
+							onStart={handleStartTraining}
+							loading={loading}
+						/>
+					) : (
+						<TrainingPanel
+							allTraits={allTraits}
+							currentTraitIndex={currentTraitIndex}
+							selectedImages={selectedImages}
+							trainingResults={trainingResults}
+							onToggleImage={handleToggleImage}
+							onSaveTrait={handleSaveTrait}
+							onSkipTrait={handleSkipTrait}
+							onExport={handleExport}
+							imageData={projectData.imageData}
+						/>
+					)}
+				</div>
 			</div>
 		</div>
 	);
