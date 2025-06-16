@@ -35,13 +35,13 @@ export default function ImageItem({
 
 	return (
 		<div
-			className={`relative border-2 rounded-lg cursor-pointer transition-all hover:shadow-md ${
-				isSelected ?
-					'border-blue-500 bg-blue-50 shadow-lg'
-				:	'border-gray-200 hover:border-gray-300'
+			className={`flex flex-col min-w-0 relative border-2 rounded-lg cursor-pointer transition-all hover:shadow-md ${
+				isSelected
+					? 'border-blue-500 bg-blue-50 shadow-lg'
+					: 'border-gray-200 hover:border-gray-300'
 			}`}
 			onClick={() => onClick(tokenId)}>
-			<div className='aspect-square bg-gray-100 rounded-lg overflow-hidden'>
+			<div className='aspect-square bg-gray-100 rounded-lg overflow-hidden h-full'>
 				<img
 					src={currentImageUrl || FALLBACK_IMAGE_SRC}
 					alt={`Token ${tokenId}`}
@@ -52,7 +52,7 @@ export default function ImageItem({
 				/>
 			</div>
 			<div className='px-2 py-1 text-center'>
-				<div className='text-xs font-medium text-gray-700 truncate'>
+				<div className='text-xs font-medium text-gray-700 truncate h-5'>
 					Token {tokenId}
 				</div>
 			</div>
